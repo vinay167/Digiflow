@@ -95,8 +95,9 @@ nav ul li a:hover {
     height: calc(100vh - 90px);
     background: url("Images/digiflow.jpg") no-repeat center center;
     background-size: cover;
+    width: 100vw; /* Ensure it covers the entire viewport width */
     position: relative;
-    padding: 20px; 
+    padding: 20px;
 }
 
 .text-container {
