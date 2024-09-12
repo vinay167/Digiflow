@@ -114,6 +114,33 @@ nav ul li a:hover {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
 }
 
+
+
+
+@media (max-width: 768px) {
+    .grid-container {
+        grid-template-columns: 1fr; /* Change to a single column layout on small screens */
+        gap: 10px; /* Reduce the gap to avoid overflow */
+    }
+
+    .button-item {
+        flex-direction: column; /* Stack text and image vertically on mobile */
+        align-items: center;
+        text-align: center; /* Center the text on mobile */
+    }
+
+    .item-image {
+        margin-left: 0; /* Remove left margin on mobile */
+        margin-top: 10px; /* Add top margin to space out the image */
+        width: 150px; /* Reduce image size for mobile */
+        height: 150px; /* Keep aspect ratio smaller for mobile */
+    }
+}
+
+
+
+
+
 .grid-section {
     background: url("Images/white.jpeg") no-repeat center center;
     background-size: cover;
