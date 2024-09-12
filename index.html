@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>DigiFlow</title>
+    <link rel="icon" href="Images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+   <header>
+    <div class="container">
+        <div class="logo">
+            DigiFlow
+        </div>
+        <nav>
+                <div class="hamburger" onclick="toggleMenu()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <ul id="nav-links">
+                    <li><a href="https://www.google.com">About</a></li>
+                    <li><a href="https://www.google.com">Services</a></li>
+                    <li><a href="https://www.google.com">Our Work</a></li>
+                    <li><a href="https://www.google.com">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+
+    <section class="background-section">
+        <div class="text-container">
+            <p class="consulting-text">Consulting</p>
+            </div>
+            <div class="sub-text-container">
+            <p class="consulting-sub-text">Solutions crafted for success.</p>
+        </div> 
+        <div class="buttons">
+            <button class="btn" onclick="redirectTo('https://www.google.com')">Our Work</button>
+            <button class="btn" onclick="redirectTo('https://www.google.com')">Book a Call</button>
+        </div>
+        
+    </section>
+    
+
+
+
+  
+
+    <section class="grid-section">
+        <div class="grid-container">
+            <a href="https://www.google.com" class="button-item">
+                <div class="text-content">
+                    <p class="button-heading">ServiceNow</p>
+                    <p class="button-subheading">Sample sub-heading 1</p>
+                </div>
+                <img src="Images/hexagon.webp" alt="ServiceNow Image" class="item-image">
+            </a>
+            <a href="https://www.google.com" class="button-item">
+                <div class="text-content">
+                <p class="button-heading">Web Development</p>
+                <p class="button-subheading">Sample sub-heading 2</p>
+            </div>
+            <img src="Images/hexagon.webp" alt="ServiceNow Image" class="item-image">
+        </a>
+        <a href="https://www.google.com" class="button-item">
+            <div class="text-content">
+                <p class="button-heading">Internet Of Things</p>
+                <p class="button-subheading">Sample sub-heading 3</p>
+            </div>
+            <img src="Images/hexagon.webp" alt="ServiceNow Image" class="item-image">
+        </a>
+        <a href="https://www.google.com" class="button-item">
+            <div class="text-content">
+                <p class="button-heading">Android Development</p>
+                <p class="button-subheading">Sample sub-heading 4</p>
+            </div>
+            <img src="Images/hexagon.webp" alt="ServiceNow Image" class="item-image">
+        </a>
+        <a href="https://www.google.com" class="button-item">
+            <div class="text-content">
+                <p class="button-heading">Market Research</p>
+                <p class="button-subheading">Sample sub-heading 5</p>
+            </div>
+            <img src="Images/hexagon.webp" alt="ServiceNow Image" class="item-image">
+        </a>
+        <a href="https://www.google.com" class="button-item">
+            <div class="text-content">
+                <p class="button-heading">GuideWire</p>
+                <p class="button-subheading">Sample sub-heading 6</p>
+            </div>
+            <img src="Images/hexagon.webp" alt="ServiceNow Image" class="item-image">
+        </a>
+        </div>
+    </section>
+    
+
+
+
+    <section class="logo-rotation-section">
+        <div class="overlay"></div>
+        <div class="logo-wrapper">
+            <div class="logo-container">
+                <img src="Images/logo1.jpg" alt="Company Logo 1" class="logo">
+                <img src="Images/logo2.jpeg" alt="Company Logo 2" class="logo">
+                <img src="Images/logo3.png" alt="Company Logo 3" class="logo">
+                <img src="Images/logo4.jpeg" alt="Company Logo 4" class="logo">
+                <img src="Images/logo5.jpeg" alt="Company Logo 5" class="logo">
+                <!-- Duplicate logos to ensure seamless effect -->
+                <img src="Images/logo1.jpg" alt="Company Logo 1" class="logo">
+                <img src="Images/logo2.jpeg" alt="Company Logo 2" class="logo">
+                <img src="Images/logo3.png" alt="Company Logo 3" class="logo">
+                <img src="Images/logo4.jpeg" alt="Company Logo 4" class="logo">
+                <img src="Images/logo4.jpeg" alt="Company Logo 5" class="logo">
+            </div>
+        </div>
+    </section>
+    
+    
+    <section class="about-us">
+        <div class="about-container">
+            <h2 class="about-heading">About Us</h2>
+            <p class="about-description">
+                At DigiFlow, we are dedicated to providing innovative solutions that drive success for our clients. With a team of experienced professionals, we specialize in cutting-edge technology and tailored strategies to help businesses thrive in a digital world. Our commitment to excellence and customer satisfaction sets us apart as a leader in the industry.
+            </p>
+            <p class="about-mission">
+                Our mission is to empower businesses by delivering top-notch services in IT consulting, software development, and digital transformation. We strive to understand our clients' unique needs and provide solutions that exceed expectations. Join us on our journey to make technology work for you.
+            </p>
+        </div>
+    </section>
+    
+
+
+
+    
+    
+
+    <script>
+        function redirectTo(url) {
+            window.location.href = url;
+        }
+    </script>
+
+
+
+    <script>
+        function toggleMenu() {
+            const navLinks = document.getElementById('nav-links');
+            navLinks.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,287 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background-color: black;
+    height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.logo {
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-size: 38px;
+    font-weight: 700;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin: 0 35px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.hamburger span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: white;
+}
+
+@media (max-width: 768px) {
+    nav ul {
+        position: absolute;
+        top: 80px;
+        right: 0;
+        background-color: black;
+        width: 100%;
+        height: 100vh;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transition: transform 0.3s ease-in-out;
+        transform: translateX(100%);
+    }
+
+    nav ul.active {
+        transform: translateX(0);
+    }
+
+    nav ul li {
+        margin: 20px 0;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+}
+
+.background-section {
+    height: calc(100vh - 90px);
+    background: url("Images/digiflow.jpg") no-repeat center center;
+    background-size: cover;
+    position: relative;
+    padding: 20px; 
+}
+
+.text-container {
+    position: absolute;
+    top: 200px;
+    left: 88px; 
+    bottom: 60px;
+}
+
+.consulting-text {
+    color: white;
+    font-size: 100px;
+    font-family: 'Roboto', sans-serif; 
+}
+
+.sub-text-container {
+    position: absolute;
+    top: 310px;
+    left: 96px; 
+    bottom: 60px;
+}
+
+
+.consulting-sub-text {
+    color: white;
+    font-size: 25px;
+    font-family: 'Roboto', sans-serif; 
+    margin-left: -2px; 
+}
+
+.buttons {
+    position: absolute;
+    bottom: 120px;
+    right: 80px;
+    display: flex;
+    gap: 30px;
+}
+
+
+.btn {
+    background: rgb(253, 232, 4);
+    border: none;
+    font-family: 'Roboto', sans-serif;
+    color: #000000; 
+    padding: 15px 25px;
+    border-radius: 20px; 
+    font-size: 17px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    width: 140px;
+}
+
+.btn:hover {
+    background: #f0f0f0; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+}
+
+.grid-section {
+    background: url("Images/white.jpeg") no-repeat center center;
+    background-size: cover;
+    padding: 20px;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    background-color: rgb(255, 255, 255);
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.button-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Ensures space between text and image */
+    width: 100%;
+    height: 300px;
+    background-color: #f4f4f4;
+    text-decoration: none;
+    color: #000;
+    padding: 20px;
+    box-sizing: border-box;
+    position: relative; /* Necessary for image positioning */
+}
+
+.text-content {
+    flex: 1; /* Takes up available space */
+    text-align: left;
+}
+
+.item-image {
+    width: 200px; /* Adjust width as needed */
+    height: 200px; /* Keeps the image's aspect ratio */
+    margin-left: 20px; /* Space between text and image */
+}
+
+.button-item:hover {
+    background-color: #e0e0e0; 
+}
+
+.button-heading {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.button-subheading {
+    font-size: 16px;
+    color: #666; 
+}
+
+
+.logo-rotation-section {
+    height: 300px;
+    background: url("Images/clients.jpg") no-repeat center center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.0); /* Adjust the alpha value (0.5) for more or less darkness */
+    z-index: 1; /* Ensure it’s above the background but below the logos */
+}
+
+.logo-wrapper {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.logo-container {
+    display: flex;
+    width: 200%; /* Adjust width to be twice the container's width */
+    animation: slide 20s linear infinite; /* Adjust duration as needed */
+}
+
+.logo {
+    width: 100px; /* Adjust size as needed */
+    height: 100px; /* Adjust size as needed */
+    margin: 0 95px; /* Adjust spacing as needed */
+}
+
+@keyframes slide {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%); /* Match the width of the logo-container */
+    }
+}
+
+
+.about-us {
+    background-color: rgb(4, 4, 4);
+    color: white;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.about-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.about-heading {
+    font-size: 36px;
+    font-family: 'Roboto', sans-serif;
+    margin-bottom: 20px;
+}
+
+.about-description,
+.about-mission {
+    font-size: 18px;
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
