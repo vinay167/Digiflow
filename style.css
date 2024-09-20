@@ -16,20 +16,20 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
+    padding: 20 px;
     background-color: #2c2c2c;
     color: #fff;
 }
 
 .header .logo {
-    font-size: 25px;
+    font-size: 25 px;
     font-weight: bold;
     font-style: italic;
 }
 
 .header .menu a {
     color: #fff;
-    margin: 0 15px;
+    margin: 0 15 px;
     text-decoration: none;
 }
 
@@ -39,7 +39,7 @@ body {
 
 /* Hero Section */
 .hero {
-    height: 100vh;
+    height: 100 vh;
     background: url('Images/digi.jpg') center/cover no-repeat;
     display: flex;
     flex-direction: column;
@@ -50,22 +50,22 @@ body {
 }
 
 .hero h1 {
-    font-size: 150px;
-    margin-bottom: 20px;
+    font-size: 150 px;
+    margin-bottom: 20 px;
 }
 
 .hero p {
-    font-size: 50px;
-    margin-bottom: 30px;
+    font-size: 50 px;
+    margin-bottom: 30 px;
 }
 
 .hero .cta-button {
-    padding: 10px 30px;
+    padding: 10 px 30 px;
     background-color: #FFD700;
     color: #333;
     text-decoration:solid;
-    border-radius: 5px;
-    transition: background 0.3s ease;
+    border-radius: 5 px;
+    transition: background 0.3 s ease;
 }
 
 .hero .cta-button:hover {
@@ -75,14 +75,14 @@ body {
 
 /* Services Section */
 .services {
-    padding: 50px 20px;
+    padding: 50 px 20 px;
     background-color: #f4f4f4;
     text-align: center;
 }
 
 .services h2 {
-    margin-bottom: 40px;
-    font-size: 36px;
+    margin-bottom: 40 px;
+    font-size: 36 px;
 }
 
 .services-container {
@@ -93,19 +93,19 @@ body {
 
 .service-box {
     background-color: #fff;
-    padding: 20px;
-    width: 30%;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    margin: 10px;
+    padding: 20 px;
+    width: 30 %;
+    box-shadow: 0 4 px 10 px rgba (0, 0, 0, 0.1);
+    margin: 10 px;
     text-decoration: none; /* Remove underline from links */
     color: inherit; /* Keep the original text color */
-    transition: transform 0.3s ease;
-    border-radius: 8px; /* Adds a nice rounded corner effect */
+    transition: transform 0.3 s ease;
+    border-radius: 8 px; /* Adds a nice rounded corner effect */
 }
 
 .service-box:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15); /* Increase shadow on hover */
+    transform: translateY (-10 px);
+    box-shadow: 0 6 px 15 px rgba (0, 0, 0, 0.15); /* Increase shadow on hover */
 }
 
 /* Ensure the text inside the link behaves like a normal text block */
@@ -117,14 +117,14 @@ body {
 
 /* Client Logos Section */
 .clients {
-    padding: 50px 20px;
+    padding: 50 px 20 px;
     background-color: #fff;
     text-align: center;
 }
 
 .clients h2 {
-    margin-bottom: 40px;
-    font-size: 36px;
+    margin-bottom: 40 px;
+    font-size: 36 px;
 }
 
 .logos {
@@ -134,9 +134,9 @@ body {
 }
 
 .logos img {
-    width: 150px;
-    margin: 20px;
-    transition: filter 0.3s ease;
+    width: 150 px;
+    margin: 20 px;
+    transition: filter 0.3 s ease;
 }
 
 
@@ -145,7 +145,7 @@ body {
     background-color: #333;
     color: #fff;
     text-align: center;
-    padding: 20px;
+    padding: 20 px;
 }
 
 .footer p {
