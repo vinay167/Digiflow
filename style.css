@@ -1,3 +1,4 @@
+/* Global Styles */
 * {
     margin: 0;
     padding: 0;
@@ -5,274 +6,148 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
-}
-
-header {
-    background-color: black;
-    height: 90px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 20px;
-}
-
-.container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-}
-
-.logo {
-    color: white;
-    font-family: 'Roboto', sans-serif;
-    font-size: 38px;
-    font-weight: 700;
-}
-
-nav ul {
-    display: flex;
-    list-style: none;
-}
-
-nav ul li {
-    margin: 0 35px;
-}
-
-nav ul li a {
-    color: white;
-    text-decoration: none;
-}
-
-nav ul li a:hover {
-    text-decoration: underline;
-}
-
-
-.background-section {
-    height: calc(100vh - 90px);
-    background: url("Images/digiflow.jpg") no-repeat center center;
-    background-size: cover;
-    width: 100vw; /* Ensure it covers the entire viewport width */
-    position: relative;
-    padding: 20px;
-}
-
-.text-container {
-    position: absolute;
-    top: 200px;
-    left: 88px; 
-    bottom: 60px;
-}
-
-.consulting-text {
-    color: white;
-    font-size: 100px;
-    font-family: 'Roboto', sans-serif; 
-}
-
-.sub-text-container {
-    position: absolute;
-    top: 310px;
-    left: 96px; 
-    bottom: 60px;
-}
-
-
-.consulting-sub-text {
-    color: white;
-    font-size: 25px;
-    font-family: 'Roboto', sans-serif; 
-    margin-left: -2px; 
-}
-
-.buttons {
-    position: absolute;
-    bottom: 120px;
-    right: 80px;
-    display: flex;
-    gap: 30px;
-}
-
-
-.btn {
-    background: rgb(253, 232, 4);
-    border: none;
-    font-family: 'Roboto', sans-serif;
-    color: #000000; 
-    padding: 15px 25px;
-    border-radius: 20px; 
-    font-size: 17px;
-    cursor: pointer;
-    transition: background 0.3s ease;
-    width: 140px;
-}
-
-.btn:hover {
-    background: #f0f0f0; 
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
-}
-
-
-
-
-@media (max-width: 768px) {
-    .grid-container {
-        grid-template-columns: 1fr; /* Change to a single column layout on small screens */
-        gap: 10px; /* Reduce the gap to avoid overflow */
-    }
-
-    .button-item {
-        flex-direction: column; /* Stack text and image vertically on mobile */
-        align-items: center;
-        text-align: center; /* Center the text on mobile */
-    }
-
-    .item-image {
-        margin-left: 0; /* Remove left margin on mobile */
-        margin-top: 10px; /* Add top margin to space out the image */
-        width: 150px; /* Reduce image size for mobile */
-        height: 150px; /* Keep aspect ratio smaller for mobile */
-    }
-}
-
-
-
-
-
-.grid-section {
-    background: url("Images/white.jpeg") no-repeat center center;
-    background-size: cover;
-    padding: 20px;
-    text-align: center;
-    font-family: 'Roboto', sans-serif;
-    background-color: rgb(255, 255, 255);
-}
-
-.grid-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-}
-
-.button-item {
-    display: flex;
-    align-items: center;
-    justify-content: space-between; /* Ensures space between text and image */
-    width: 100%;
-    height: 300px;
-    background-color: #f4f4f4;
-    text-decoration: none;
-    color: #000;
-    padding: 20px;
-    box-sizing: border-box;
-    position: relative; /* Necessary for image positioning */
-}
-
-.text-content {
-    flex: 1; /* Takes up available space */
-    text-align: left;
-}
-
-.item-image {
-    width: 200px; /* Adjust width as needed */
-    height: 200px; /* Keeps the image's aspect ratio */
-    margin-left: 20px; /* Space between text and image */
-}
-
-.button-item:hover {
-    background-color: #e0e0e0; 
-}
-
-.button-heading {
-    font-size: 24px;
-    margin-bottom: 10px;
-}
-
-.button-subheading {
-    font-size: 16px;
-    color: #666; 
-}
-
-
-.logo-rotation-section {
-    height: 300px;
-    background: url("Images/clients.jpg") no-repeat center center;
-    background-size: cover;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-    position: relative;
-}
-
-.overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.0); /* Adjust the alpha value (0.5) for more or less darkness */
-    z-index: 1; /* Ensure it’s above the background but below the logos */
-}
-
-.logo-wrapper {
-    width: 100%;
-    overflow: hidden;
-    position: relative;
-}
-
-.logo-container {
-    display: flex;
-    width: 200%; /* Adjust width to be twice the container's width */
-    animation: slide 20s linear infinite; /* Adjust duration as needed */
-}
-
-.logo {
-    width: 100px; /* Adjust size as needed */
-    height: 100px; /* Adjust size as needed */
-    margin: 0 95px; /* Adjust spacing as needed */
-}
-
-@keyframes slide {
-    0% {
-        transform: translateX(0);
-    }
-    100% {
-        transform: translateX(-50%); /* Match the width of the logo-container */
-    }
-}
-
-
-.about-us {
-    background-color: rgb(4, 4, 4);
-    color: white;
-    padding: 60px 20px;
-    text-align: center;
-}
-
-.about-container {
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.about-heading {
-    font-size: 36px;
-    font-family: 'Roboto', sans-serif;
-    margin-bottom: 20px;
-}
-
-.about-description,
-.about-mission {
-    font-size: 18px;
     font-family: 'Arial', sans-serif;
+    color: #333;
     line-height: 1.6;
-    margin-bottom: 20px;
-    max-width: 800px;
-    margin: 0 auto;
 }
 
-body, html {
-    overflow-x: hidden; /* Prevent horizontal scroll on mobile */
+/* Header Section */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #2c2c2c;
+    color: #fff;
+}
+
+.header .logo {
+    font-size: 25px;
+    font-weight: bold;
+    font-style: italic;
+}
+
+.header .menu a {
+    color: #fff;
+    margin: 0 15px;
+    text-decoration: none;
+}
+
+.header .menu a:hover {
+    color: #FFD700;
+}
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    background: url('Images/digi.jpg') center/cover no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+}
+
+.hero h1 {
+    font-size: 150px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 50px;
+    margin-bottom: 30px;
+}
+
+.hero .cta-button {
+    padding: 10px 30px;
+    background-color: #FFD700;
+    color: #333;
+    text-decoration:solid;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+.hero .cta-button:hover {
+    background-color: #fff;
+    color: #333;
+}
+
+/* Services Section */
+.services {
+    padding: 50px 20px;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+.services h2 {
+    margin-bottom: 40px;
+    font-size: 36px;
+}
+
+.services-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.service-box {
+    background-color: #fff;
+    padding: 20px;
+    width: 30%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    text-decoration: none; /* Remove underline from links */
+    color: inherit; /* Keep the original text color */
+    transition: transform 0.3s ease;
+    border-radius: 8px; /* Adds a nice rounded corner effect */
+}
+
+.service-box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15); /* Increase shadow on hover */
+}
+
+/* Ensure the text inside the link behaves like a normal text block */
+.service-box h3, .service-box p {
+    margin: 0;
+    color: #030202; /* Ensure consistent text color */
+}
+
+
+/* Client Logos Section */
+.clients {
+    padding: 50px 20px;
+    background-color: #fff;
+    text-align: center;
+}
+
+.clients h2 {
+    margin-bottom: 40px;
+    font-size: 36px;
+}
+
+.logos {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.logos img {
+    width: 150px;
+    margin: 20px;
+    transition: filter 0.3s ease;
+}
+
+
+/* Footer Section */
+.footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+.footer p {
+    margin: 0;
 }
