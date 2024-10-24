@@ -40,7 +40,6 @@ body {
 /* Hero Section */
 .hero {
     height: 100vh;
-    background: #2c2c2c url('Images/Digi.jpg') center/cover no-repeat;
     display: flex;
     flex-direction: column;
     justify-content: center;
