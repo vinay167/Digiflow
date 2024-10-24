@@ -36,6 +36,7 @@ body {
     color: #fff;
     margin: 0 15px;
     text-decoration: none;
+    transition: color 0.3s;
 }
 
 .header .menu a:hover {
@@ -156,4 +157,59 @@ body {
 
 .footer p {
     margin: 0;
+}
+
+/* MEDIA QUERIES FOR RESPONSIVENESS */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column; /* Stack header items */
+        align-items: flex-start; /* Align items to the left */
+    }
+
+    .header .menu {
+        margin-top: 10px; /* Space between logo and menu */
+    }
+
+    .hero h1 {
+        font-size: 36px; /* Smaller font size for hero title */
+    }
+
+    .hero p {
+        font-size: 18px; /* Smaller font size for hero paragraph */
+    }
+
+    .post {
+        width: 45%; /* Adjust post width on medium screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .header .logo {
+        font-size: 20px; /* Smaller logo size for mobile */
+    }
+
+    .hero h1 {
+        font-size: 28px; /* Further reduce hero title size */
+    }
+
+    .hero p {
+        font-size: 16px; /* Further reduce hero paragraph size */
+    }
+
+    .blog h2 {
+        font-size: 28px; /* Smaller heading for blog section */
+    }
+
+    .post {
+        width: 90%; /* Full width for posts on mobile */
+        margin: 10px auto; /* Center posts */
+    }
+
+    .post-content h3 {
+        font-size: 20px; /* Smaller font size for post titles */
+    }
+
+    .post-content p {
+        font-size: 14px; /* Smaller font size for post content */
+    }
 }
