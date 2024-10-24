@@ -1,159 +1,222 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f9f9f9;
-    color: #333;
-  }
-  
-  /* Header Section */
-  .header {
-    background: url('Images/backg.png') no-repeat center center/cover;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-  }
-  
-  .overlay {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-right: 600px;
-    justify-content: center;
-  }
-  
-  .overlay h1 {
-    color: white;
-    font-size: 4rem;
-    animation: fadeIn 2s ease;
-  }
-  
-  .overlay p {
-    color: white;
-    font-size: 1.5rem;
-    animation: fadeIn 4s ease;
-  }
-  
-  @keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
-  }
-  
-  /* About Section */
-  .about {
-    padding: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: linear-gradient(120deg, #f7f7f7, #e9ecef);
-  }
-  
-  .about-content {
-    display: flex;
-    align-items: center;
-    gap: 30px;
-  }
-  
-  .profile-img {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-  }
-  
-  .bio h2 {
-    margin-bottom: 15px;
-    color: #333;
-  }
-  
-  .bio p {
-    font-size: 1.2rem;
-    line-height: 1.6;
-  }
-  
-  
-  /* Skills Section */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+/* Header Section */
+.header {
+  background: url('Images/backg.png') no-repeat center center/cover;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.overlay {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-right: 680px;
+  align-items: center;
+  justify-content: center;
+  text-align: center; /* Center text for better alignment */
+}
+
+.overlay h1 {
+  color: white;
+  font-size: 4rem;
+  animation: fadeIn 2s ease;
+}
+
+.overlay p {
+  color: white;
+  font-size: 1.5rem;
+  animation: fadeIn 4s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* About Section */
+.about {
+  padding: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(120deg, #f7f7f7, #e9ecef);
+}
+
+.about-content {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.profile-img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.bio h2 {
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.bio p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+/* Skills Section */
 .skills {
-    padding: 50px;
-    text-align: center;
-    background-color: #f4f4f4;
+  padding: 50px;
+  text-align: center;
+  background-color: #f4f4f4;
+}
+
+.skills h2 {
+  margin-bottom: 30px;
+  font-size: 2rem;
+  color: #333;
+}
+
+.skill-set {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.skill {
+  width: 80%;
+  margin: 15px 0;
+  text-align: left;
+}
+
+.progress {
+  background-color: #e0e0e0;
+  border-radius: 25px;
+  height: 20px;
+  overflow: hidden;
+}
+
+.progress-bar {
+  height: 100%;
+  border-radius: 25px;
+  transition: width 0.5s;
+}
+
+.html {
+  background-color: #e34f26;
+}
+
+.css {
+  background-color: #264de4;
+}
+
+.js {
+  background-color: #f0db4f;
+}
+
+.react {
+  background-color: #61dafb;
+}
+
+/* Contact Section */
+.contact {
+  padding: 50px;
+  text-align: center;
+  background-color: #333;
+  color: white;
+}
+
+.social-icons a img {
+  width: 40px;
+  margin: 0 15px;
+  transition: transform 0.3s;
+}
+
+.social-icons a:hover img {
+  transform: scale(1.2);
+}
+
+.contact h2 {
+  margin-bottom: 20px;
+}
+
+/* MEDIA QUERIES FOR RESPONSIVENESS */
+@media (max-width: 768px) {
+  .overlay h1 {
+      font-size: 3rem; /* Reduce font size for smaller screens */
   }
-  
+
+  .overlay p {
+      font-size: 1.2rem; /* Reduce font size for smaller screens */
+  }
+
+  .about-content {
+      flex-direction: column; /* Stack profile image and bio */
+      align-items: center; /* Center align */
+      gap: 20px; /* Reduced gap */
+  }
+
+  .profile-img {
+      width: 120px; /* Smaller profile image */
+      height: 120px;
+  }
+
+  .bio p {
+      font-size: 1rem; /* Smaller bio text */
+  }
+
   .skills h2 {
-    margin-bottom: 30px;
-    font-size: 2rem;
-    color: #333;
+      font-size: 1.5rem; /* Smaller skills section title */
   }
-  
-  .skill-set {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
+
   .skill {
-    width: 80%;
-    margin: 15px 0;
-    text-align: left;
+      width: 90%; /* Full width for skills on mobile */
   }
-  
-  .progress {
-    background-color: #e0e0e0;
-    border-radius: 25px;
-    height: 20px;
-    overflow: hidden;
-  }
-  
-  .progress-bar {
-    height: 100%;
-    border-radius: 25px;
-    transition: width 0.5s;
-  }
-  
-  .html {
-    background-color: #e34f26;
-  }
-  
-  .css {
-    background-color: #264de4;
-  }
-  
-  .js {
-    background-color: #f0db4f;
-  }
-  
-  .react {
-    background-color: #61dafb;
-  }
-  
-  
-  /* Contact Section */
-  .contact {
-    padding: 50px;
-    text-align: center;
-    background-color: #333;
-    color: white;
-  }
-  
-  .social-icons a img {
-    width: 40px;
-    margin: 0 15px;
-    transition: transform 0.3s;
-  }
-  
-  .social-icons a:hover img {
-    transform: scale(1.2);
-  }
-  
+
   .contact h2 {
-    margin-bottom: 20px;
+      font-size: 1.5rem; /* Smaller contact section title */
   }
-  
+}
+
+@media (max-width: 480px) {
+  .overlay h1 {
+      font-size: 2.5rem; /* Further reduce font size for very small screens */
+  }
+
+  .overlay p {
+      font-size: 1rem; /* Further reduce font size */
+  }
+
+  .profile-img {
+      width: 100px; /* Further decrease profile image size */
+      height: 100px;
+  }
+
+  .bio p {
+      font-size: 0.9rem; /* Further decrease bio text size */
+  }
+
+  .skills h2 {
+      font-size: 1.2rem; /* Further reduce skills section title */
+  }
+
+  .contact h2 {
+      font-size: 1.2rem; /* Further reduce contact section title */
+  }
+}
