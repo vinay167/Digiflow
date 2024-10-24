@@ -21,6 +21,7 @@ h1 {
     display: flex;
     justify-content: center;
     margin: 20px 0;
+    flex-wrap: wrap; /* Allow wrapping for mobile */
 }
 
 .tab-button {
@@ -34,7 +35,8 @@ h1 {
     font-size: 16px; /* Larger font */
 }
 
-.tab-button.active, .tab-button:hover {
+.tab-button.active,
+.tab-button:hover {
     background-color: #005a9c;
     transform: scale(1.05); /* Scale effect on hover */
 }
@@ -74,6 +76,7 @@ footer {
     width: 300px;
     background-color: #fff;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin: 20px auto; /* Center the chatbox */
 }
 
 .chatbox-header {
@@ -117,6 +120,7 @@ footer {
 .chatbox-footer button:hover {
     background-color: #0056b3;
 }
+
 .user {
     background-color: #d1e7dd;
     text-align: right;
@@ -131,4 +135,42 @@ footer {
     margin: 5px 0;
     padding: 5px;
     border-radius: 8px;
+}
+
+/* MEDIA QUERIES FOR RESPONSIVENESS */
+@media (max-width: 768px) {
+    .tab-button {
+        flex: 1 1 auto; /* Allow buttons to grow and shrink */
+        margin: 5px; /* Margin for mobile */
+        font-size: 14px; /* Slightly smaller font */
+        padding: 10px 15px; /* Adjusted padding */
+    }
+
+    .chatbox {
+        width: 90%; /* Full width on mobile */
+        margin: 20px auto; /* Center the chatbox */
+    }
+
+    iframe {
+        height: 200px; /* Reduce iframe height for smaller screens */
+    }
+
+    footer {
+        font-size: 14px; /* Smaller footer text */
+    }
+}
+
+@media (max-width: 480px) {
+    .tab-button {
+        font-size: 12px; /* Smaller font for extra small screens */
+        padding: 8px 10px; /* Reduced padding */
+    }
+
+    .chatbox {
+        width: 100%; /* Full width for very small screens */
+    }
+
+    iframe {
+        height: 150px; /* Further reduce iframe height */
+    }
 }
