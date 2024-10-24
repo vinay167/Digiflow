@@ -151,23 +151,3 @@ body {
 .footer p {
     margin: 0;
 }
-
-@media (max-width: 768px) {
-    .hero h1 {
-        font-size: 80px;
-    }
-    .hero p {
-        font-size: 30px;
-    }
-}
-@media (max-width: 768px) {
-    .service-box {
-        width: 45%;
-    }
-}
-
-@media (max-width: 480px) {
-    .service-box {
-        width: 100%;
-    }
-}
