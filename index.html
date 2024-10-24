@@ -1,81 +1,153 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DigiFlow</title>
-    <link rel="icon" href="Images/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-    <!-- Header Section -->
-    <header class="header">
-        <div class="logo">DigiFlow</div>
-        <nav class="menu">
-            <a href="index.html">Home</a>
-            <a href="About.html">About</a>
-            <a href="Service.html">Services</a>
-            <a href="Contact.html">Contact</a>
-        </nav>
-    </header>
+body {
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    line-height: 1.6;
+}
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <h1>DigiFlow</h1>
-        <p>We build scalable and efficient software to help your business grow.</p>
-        <a href="#services" class="cta-button">Book a call</a>
-    </section>
+/* Header Section */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #2c2c2c;
+    color: #fff;
+}
 
-    <!-- Services Section -->
-    <section class="services" id="services">
-        <h2>Our Services</h2>
-        <div class="services-container">
-            <a href="servicenow.html" class="service-box">
-                <h3>ServiceNow</h3>
-                <p>Custom web solutions tailored to your needs.</p>
-            </a>
-            <a href="Web.html" class="service-box">
-                <h3>web-development</h3>
-                <p>Feature-rich mobile applications for iOS and Android.</p>
-            </a>
-            <a href="servicenow.html" class="service-box">
-                <h3>IOT</h3>
-                <p>Scale your business with our cloud-based technologies.</p>
-            </a>
-            <a href="servicenow.html" class="service-box">
-                <h3>Market Research</h3>
-                <p>Custom web solutions tailored to your needs.</p>
-            </a>
-            <a href="servicenow.html" class="service-box">
-                <h3>Android Development</h3>
-                <p>Feature-rich mobile applications for iOS and Android.</p>
-            </a>
-            <a href="servicenow.html" class="service-box">
-                <h3>Cloud Solutions</h3>
-                <p>Scale your business with our cloud-based technologies.</p>
-            </a>
-        </div>
+.header .logo {
+    font-size: 25px;
+    font-weight: bold;
+    font-style: italic;
+}
 
-    </section>
-    
+.header .menu a {
+    color: #fff;
+    margin: 0 15px;
+    text-decoration: none;
+}
 
-    <!-- Client Logos Section -->
-    <section class="clients">
-        <h2>Our Clients</h2>
-        <div class="logos">
-            <img src="Images/EY logo.png" alt="Client 1">
-            <img src="Images/deloitte-logo.png" alt="Client 2">
-            <img src="Images/kpmg-logo-1.png" alt="Client 3">
-            <img src="Images/coca-cola-logo.png" alt="Client 4">
-        </div>
-    </section>
+.header .menu a:hover {
+    color: #FFD700;
+}
 
-  
-        <!-- Footer Section -->
-        <footer class="footer">
-            <p>© 2024 DigiFlow | All Rights Reserved</p>
-        </footer>
-    
-    </body>
-    </html>
+/* Hero Section */
+.hero {
+    height: 100vh;
+    background: url('Images/Digi.jpg') center/cover no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+}
+
+.hero h1 {
+    font-size: 150px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 50px;
+    margin-bottom: 30px;
+}
+
+.hero .cta-button {
+    padding: 10px 30px;
+    background-color: #FFD700;
+    color: #333;
+    text-decoration:solid;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+.hero .cta-button:hover {
+    background-color: #fff;
+    color: #333;
+}
+
+/* Services Section */
+.services {
+    padding: 50px 20px;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+.services h2 {
+    margin-bottom: 40px;
+    font-size: 36px;
+}
+
+.services-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.service-box {
+    background-color: #fff;
+    padding: 20px;
+    width: 30%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    text-decoration: none; /* Remove underline from links */
+    color: inherit; /* Keep the original text color */
+    transition: transform 0.3s ease;
+    border-radius: 8px; /* Adds a nice rounded corner effect */
+}
+
+.service-box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15); /* Increase shadow on hover */
+}
+
+/* Ensure the text inside the link behaves like a normal text block */
+.service-box h3, .service-box p {
+    margin: 0;
+    color: #030202; /* Ensure consistent text color */
+}
+
+
+/* Client Logos Section */
+.clients {
+    padding: 50px 20px;
+    background-color: #fff;
+    text-align: center;
+}
+
+.clients h2 {
+    margin-bottom: 40px;
+    font-size: 36px;
+}
+
+.logos {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.logos img {
+    width: 150px;
+    margin: 20px;
+    transition: filter 0.3s ease;
+}
+
+
+/* Footer Section */
+.footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+.footer p {
+    margin: 0;
+}
