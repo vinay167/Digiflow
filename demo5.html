@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Website</title>
+    <link rel="stylesheet" href="demo5.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Explore the World</h1>
+            <nav>
+                <ul>
+                    <li><a href="#destinations">Destinations</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <section class="hero">
+        <div class="hero-content">
+            <h2>Your Adventure Awaits</h2>
+            <p>Discover breathtaking places and unforgettable experiences.</p>
+            <form class="search-form">
+                <input type="text" placeholder="Search for a city..." id="searchInput">
+                <button type="button" class="btn" onclick="searchCity()">Search</button>
+            </form>
+        </div>
+    </section>
+    <section id="destinations" class="destinations">
+        <div class="container">
+            <h2>Featured Destinations</h2>
+            <div class="destination-cards" id="destinationCards">
+                <div class="card" data-city="Paris">
+                    <img src="Images/paris.png" alt="Destination 1">
+                    <h3>Paris</h3>
+                    <p>The City of Lights.</p>
+                    <a href="#" class="btn">Learn More</a>
+                </div>
+                <div class="card" data-city="New York">
+                    <img src="Images/Newyork.png" alt="Destination 2">
+                    <h3>New York</h3>
+                    <p>The Big Apple.</p>
+                    <a href="#" class="btn">Learn More</a>
+                </div>
+                <div class="card" data-city="Tokyo">
+                    <img src="Images/tokyo.png" alt="Destination 3">
+                    <h3>Tokyo</h3>
+                    <p>The Heart of Japan.</p>
+                    <a href="#" class="btn">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Explore the World. All rights reserved.</p>
+        </div>
+    </footer>
+    
+    <script>
+        function searchCity() {
+            const input = document.getElementById('searchInput').value.toLowerCase();
+            const cards = document.querySelectorAll('.card');
+            let found = false;
+
+            cards.forEach(card => {
+                const city = card.getAttribute('data-city').toLowerCase();
+                if (city.includes(input)) {
+                    card.style.display = 'block';
+                    found = true;
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+
+            if (!found) {
+                alert("No cities found.");
+            }
+        }
+    </script>
+</body>
+</html>
