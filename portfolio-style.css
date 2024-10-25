@@ -1,3 +1,4 @@
+/* Base Styles */
 * {
   margin: 0;
   padding: 0;
@@ -12,7 +13,7 @@ body {
 
 /* Header Section */
 .header {
-  background: url('Images/backg.png') no-repeat center center/cover;
+  background: url('Images/My2.png') no-repeat center center/cover;
   height: 100vh;
   display: flex;
   align-items: center;
@@ -25,10 +26,9 @@ body {
   height: 100%;
   display: flex;
   flex-direction: column;
-  margin-right: 610px;
   align-items: center;
   justify-content: center;
-  text-align: center; /* Center text for better alignment */
+  text-align: center;
 }
 
 .overlay h1 {
@@ -118,21 +118,10 @@ body {
   transition: width 0.5s;
 }
 
-.html {
-  background-color: #e34f26;
-}
-
-.css {
-  background-color: #264de4;
-}
-
-.js {
-  background-color: #f0db4f;
-}
-
-.react {
-  background-color: #61dafb;
-}
+.html { width: 90%; background-color: #e34f26; }
+.css { width: 80%; background-color: #264de4; }
+.js { width: 70%; background-color: #f0db4f; }
+.react { width: 75%; background-color: #61dafb; }
 
 /* Contact Section */
 .contact {
@@ -158,65 +147,77 @@ body {
 
 /* MEDIA QUERIES FOR RESPONSIVENESS */
 @media (max-width: 768px) {
+  .header {
+      height: 70vh; /* Reduce height for smaller screens */
+  }
+
   .overlay h1 {
-      font-size: 3rem; /* Reduce font size for smaller screens */
+      font-size: 3rem;
   }
 
   .overlay p {
-      font-size: 1.2rem; /* Reduce font size for smaller screens */
+      font-size: 1.2rem;
   }
 
   .about-content {
-      flex-direction: column; /* Stack profile image and bio */
-      align-items: center; /* Center align */
-      gap: 20px; /* Reduced gap */
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
   }
 
   .profile-img {
-      width: 120px; /* Smaller profile image */
+      width: 120px;
       height: 120px;
   }
 
   .bio p {
-      font-size: 1rem; /* Smaller bio text */
+      font-size: 1rem;
   }
 
   .skills h2 {
-      font-size: 1.5rem; /* Smaller skills section title */
+      font-size: 1.5rem;
   }
 
   .skill {
-      width: 90%; /* Full width for skills on mobile */
+      width: 90%;
   }
 
   .contact h2 {
-      font-size: 1.5rem; /* Smaller contact section title */
+      font-size: 1.5rem;
   }
 }
 
 @media (max-width: 480px) {
+  .header {
+      height: 60vh;
+  }
+
   .overlay h1 {
-      font-size: 2.5rem; /* Further reduce font size for very small screens */
+      font-size: 2.5rem;
   }
 
   .overlay p {
-      font-size: 1rem; /* Further reduce font size */
+      font-size: 1rem;
   }
 
   .profile-img {
-      width: 100px; /* Further decrease profile image size */
+      width: 100px;
       height: 100px;
   }
 
+  .about, .skills, .contact {
+      padding: 30px;
+  }
+
   .bio p {
-      font-size: 0.9rem; /* Further decrease bio text size */
+      font-size: 0.9rem;
   }
 
   .skills h2 {
-      font-size: 1.2rem; /* Further reduce skills section title */
+      font-size: 1.2rem;
   }
 
   .contact h2 {
-      font-size: 1.2rem; /* Further reduce contact section title */
+      font-size: 1.2rem;
   }
 }
