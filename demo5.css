@@ -1,0 +1,210 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.6;
+    background: url('Images/Travel.png') no-repeat center center fixed; /* Set your background image */
+    background-size: cover; /* Cover the entire area */
+    color: #333;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+header {
+    background: rgba(106, 130, 251, 0.8); /* Slightly transparent header */
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #ffeb3b;
+}
+
+.hero {
+    text-align: center;
+    padding: 100px 20px;
+    position: relative;
+}
+
+.hero-content {
+    z-index: 1; /* Ensure content is above any background elements */
+}
+
+.hero-content h2 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: 20px;
+    margin: 20px 0;
+}
+
+.search-form {
+    margin: 20px 0;
+}
+
+.search-form input {
+    padding: 10px;
+    width: 300px;
+    border: none;
+    border-radius: 25px;
+    outline: none;
+    margin-right: 10px;
+    font-size: 16px;
+}
+
+.search-form button {
+    padding: 10px 20px;
+    background: #ff6347;
+    color: #fff;
+    border: none;
+    border-radius: 25px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.search-form button:hover {
+    background: #ff4500;
+}
+
+.btn {
+    display: inline-block;
+    padding: 15px 30px;
+    background: #ff6347;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: 600;
+    transition: background 0.3s, transform 0.3s;
+}
+
+.btn:hover {
+    background: #ff4500;
+    transform: scale(1.05);
+}
+
+.destinations {
+    padding: 50px 0;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.8); /* Add a slight background to card section for readability */
+}
+
+.destinations h2 {
+    margin-bottom: 30px;
+    font-size: 32px;
+}
+
+.destination-cards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.card {
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+    width: 300px;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card h3 {
+    margin: 15px 0;
+    font-size: 24px;
+}
+
+.card p {
+    padding: 0 15px 15px;
+    font-size: 16px;
+    color: #666;
+}
+
+footer {
+    background: rgba(106, 130, 251, 0.8);
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    position: relative;
+}
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 28px;
+    }
+
+    .hero-content h2 {
+        font-size: 36px;
+    }
+
+    .hero-content p {
+        font-size: 18px;
+    }
+
+    .search-form input {
+        width: 80%;
+    }
+
+    .destination-cards {
+        flex-direction: column; /* Stack cards on smaller screens */
+        align-items: center; /* Center cards */
+    }
+
+    .card {
+        width: 90%; /* Make cards wider on smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    nav ul {
+        flex-direction: column; /* Stack navigation links */
+    }
+
+    nav ul li {
+        margin: 10px 0; /* Space out links vertically */
+    }
+}
