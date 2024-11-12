@@ -5,86 +5,57 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DigiFlow</title>
     <link rel="icon" href="Images/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="demo-style.css">
 </head>
 <body>
-    <header>
-        <h1>ServiceNow Demo Videos</h1>
-        <p>Explore our expertise in various ServiceNow modules.</p>
+
+    <!-- Header Section -->
+    <header class="header">
+        <div class="logo">DigiFlow</div>
+        <nav class="menu">
+            <a href="index.html">Home</a>
+            <a href="About.html">About</a>
+            <a href="Service.html">Services</a>
+            <a href="Contact.html">Contact</a>
+        </nav>
     </header>
-    <main>
-        <div class="tabs">
-            <button class="tab-button active" onclick="openTab(event, 'itsm')">ITSM</button>
-            <button class="tab-button" onclick="openTab(event, 'csm')">CSM</button>
-            <button class="tab-button" onclick="openTab(event, 'sp')">Service Portal</button>
-            <button class="tab-button" onclick="openTab(event, 'irm')">IRM</button>
-            <button class="tab-button" onclick="openTab(event, 'hrsd')">HRSD</button>
-        </div>
 
-        <div id="itsm" class="tab-content active">
-            <h2>ITSM</h2>
-            <p>IT Service Management (ITSM) encompasses a range of processes designed to manage IT services, ensuring efficient service delivery and customer satisfaction. It enables organizations to streamline incident management, problem resolution, and change management, thereby enhancing overall operational efficiency. Our ITSM solution offers robust features that align IT services with business needs, improve service quality, and reduce operational costs. Watch the demo to see how ITSM can transform your IT operations.</p>
-            <iframe src="https://www.youtube.com/embed/your-video-id1" frameborder="0" allowfullscreen></iframe>
+    <!-- Demo Section -->
+    <section class="demo-section">
+        <h2>Servicenow Demos</h2>
+        <div class="demo-container">
+            <a href="demo1.html" class="demo-box">
+                <div class="demo-image" style="background-image: url('Images/ServicePortal.png');"></div>
+                <h3>Service Portal</h3>
+                <p>Create a seamless user experience with a customized, intuitive ServiceNow Service Portal, tailored to your business needs.</p>
+            </a>
+            <a href="demo2.html" class="demo-box">
+                <div class="demo-image" style="background-image: url('Images/itsm.png');"></div>
+                <h3>ITSM</h3>
+                <p>Optimize IT operations with ServiceNow ITSM, enabling faster resolutions and efficient incident, problem, and change management.</p>
+            </a>
+            <a href="demo5.html" class="demo-box">
+                <div class="demo-image" style="background-image: url('Images/hrsd.png');"></div>
+                <h3>HRSD</h3>
+                <p>Enhance employee satisfaction with ServiceNow HRSD, providing streamlined HR services and self-service capabilities.</p>
+            </a>
+            <a href="demo4.html" class="demo-box">
+                <div class="demo-image" style="background-image: url('Images/csm.png');"></div>
+                <h3>CSM</h3>
+                <p>Elevate customer engagement and service delivery with ServiceNow CSM, designed to meet and exceed client expectations.</p>
+            </a>
+            <a href="Product_page.html" class="demo-box">
+                <div class="demo-image" style="background-image: url('Images/cmdb.png');"></div>
+                <h3>CMDB</h3>
+                <p>Gain full visibility into your IT landscape with ServiceNow CMDB, driving accurate decision-making and operational efficiency.</p>
+            </a>
         </div>
-        
-        <div id="csm" class="tab-content">
-            <h2>CSM</h2>
-            <p>Customer Service Management (CSM) is designed to improve customer interactions and service delivery. It streamlines processes by integrating customer support functions, allowing for quicker response times and enhanced customer satisfaction. Our CSM solution provides features like automated case management, knowledge base integration, and self-service capabilities, empowering customers to find solutions quickly. Discover how CSM can revolutionize your customer service approach by watching the demo.</p>
-            <iframe src="https://www.youtube.com/embed/your-video-id2" frameborder="0" allowfullscreen></iframe>
-        </div>
+    </section>
 
-        <div id="sp" class="tab-content">
-            <h2>Service Portal</h2>
-            <p>The Service Portal provides a user-friendly interface that enhances the experience for customers and employees seeking services. It centralizes access to various IT and HR services, making it easier to submit requests and track their progress. Our Service Portal is customizable and integrates seamlessly with other ServiceNow applications, ensuring a cohesive user experience. Watch the demo to see the powerful features of our Service Portal in action.</p>
-            <iframe src="https://www.youtube.com/embed/your-video-id3" frameborder="0" allowfullscreen></iframe>
-        </div>
-
-        <div id="irm" class="tab-content">
-            <h2>IRM</h2>
-            <p>Integrated Risk Management (IRM) enables organizations to identify, assess, and mitigate risks effectively. It integrates various risk management processes, providing a unified approach to risk assessment and reporting. With our IRM solution, organizations can streamline compliance, enhance visibility into risks, and promote a culture of risk awareness. Discover how to safeguard your organization by watching the IRM demo.</p>
-            <iframe src="https://www.youtube.com/embed/your-video-id4" frameborder="0" allowfullscreen></iframe>
-        </div>
-
-        <div id="hrsd" class="tab-content">
-            <h2>HRSD</h2>
-            <p>HR Service Delivery (HRSD) is designed to improve the efficiency of HR processes and enhance employee experience. By automating HR tasks and providing a centralized platform for employee services, HRSD enables organizations to respond to employee needs more effectively. Features such as self-service portals, case management, and knowledge management allow HR teams to focus on strategic initiatives. Watch the HRSD demo to see how we can support your HR transformation.</p>
-            <iframe src="https://www.youtube.com/embed/your-video-id5" frameborder="0" allowfullscreen></iframe>
-        </div>
-    </main>
-
-    <footer>
-        <p>&copy; 2024 Your Company Name. All rights reserved.</p>
+    <!-- Footer Section -->
+    <footer class="footer">
+        <p>© 2024 DigiFlow | All Rights Reserved</p>
     </footer>
-
-    <script>
-        function openTab(evt, moduleName) {
-            const tabContents = document.getElementsByClassName("tab-content");
-            for (let tabContent of tabContents) {
-                tabContent.classList.remove("active");
-            }
-            const tabButtons = document.getElementsByClassName("tab-button");
-            for (let tabButton of tabButtons) {
-                tabButton.classList.remove("active");
-            }
-            document.getElementById(moduleName).classList.add("active");
-            evt.currentTarget.classList.add("active");
-        }
-    </script>
-
-<div class="chatbox">
-    <div class="chatbox-header">
-        <h2>Chat</h2>
-    </div>
-    <div class="chatbox-body" id="chatbox-body">
-        <!-- Messages will appear here -->
-    </div>
-    <div class="chatbox-footer">
-        <input type="text" id="message-input" placeholder="Type a message..." />
-        <button id="send-button">Send</button>
-    </div>
-</div>
-
-<script src="script.js"></script>
 
 </body>
 </html>

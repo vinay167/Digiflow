@@ -22,7 +22,7 @@ body {
 }
 
 .header .logo {
-    font-size: 25px;
+    font-size: 40px; /* Increased logo size */
     font-weight: bold;
     font-style: italic;
 }
@@ -44,7 +44,6 @@ body {
 /* Hero Section */
 .hero {
     height: 100vh;
-    background: url('Images/Digi.jpg') center/cover no-repeat;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -144,67 +143,135 @@ body {
     padding: 20px;
 }
 
-/* MEDIA QUERIES FOR RESPONSIVENESS */
-@media (max-width: 768px) {
-    .header {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .header .menu {
-        flex-direction: column;
-    }
-
-    .header .menu a {
-        margin: 10px 0;
-    }
-
-    .hero h1 {
-        font-size: 80px;
-    }
-
-    .hero p {
-        font-size: 30px;
-    }
-
-    .services-container {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .service-box {
-        width: 90%;
-        margin-bottom: 20px;
-    }
-
-    .logos img {
-        width: 100px;
-    }
+/* Chat Window */
+.chat-container {
+    position: fixed;
+    bottom: 95px; /* Adjusted position to avoid overlap */
+    right: 20px;
+    width: 400px; /* Increased width */
+    height: 400px; /* Increased height */
+    background: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    display: none; /* Hidden by default */
+    flex-direction: column;
+    border-radius: 8px;
+    overflow: hidden;
 }
 
-@media (max-width: 480px) {
+.chat-container.active {
+    display: flex; /* Show when active */
+}
+
+.chat-header {
+    background: #2c2c2c;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+
+.chatbox {
+    height: calc(100% - 60px); /* Adjusted height for input */
+    overflow-y: auto;
+    padding: 10px;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9; /* Added background color */
+    border-radius: 4px; /* Rounded corners */
+}
+
+/* Input Box */
+.input-container {
+    display: flex; /* Align items in a row */
+    padding: 10px; /* Added padding for the input area */
+}
+
+#message-input {
+    flex: 1; /* Allow input to grow */
+    padding: 10px; /* Increased padding */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-right: 5px; /* Space between input and button */
+}
+
+/* Message styling */
+.chatbox div {
+    margin-bottom: 10px;
+    padding: 5px;
+    border-radius: 5px; /* Rounded corners for messages */
+}
+
+.chatbox .user {
+    text-align: right;
+    color: blue;
+    background-color: #e0f7fa; /* User message background */
+    margin-left: 50%; /* Align to the right */
+    margin-right: 0;
+    border-radius: 10px 10px 0 10px; /* Rounded corners */
+    max-width: 80%; /* Prevent messages from stretching too much */
+    padding: 10px; /* Added padding for better appearance */
+}
+
+.chatbox .bot {
+    text-align: left;
+    color: green;
+    background-color: #e0ffe0; /* Bot message background */
+    margin-right: 50%; /* Align to the left */
+    margin-left: 0;
+    border-radius: 10px 10px 10px 0; /* Rounded corners */
+    max-width: 80%; /* Prevent messages from stretching too much */
+    padding: 10px; /* Added padding for better appearance */
+}
+
+/* Send Button */
+#send-button {
+    padding: 10px 15px; /* Add padding for better appearance */
+    border: none;
+    border-radius: 4px;
+    background-color: #FFD700; /* Same as hero button */
+    cursor: pointer;
+}
+
+/* Floating Button */
+.floating-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #FFD700;
+    border: none;
+    border-radius: 50%;
+    width: 80px; /* Keep this as is or increase if needed */
+    height: 80px; /* Keep this as is or increase if needed */
+    font-size: 38px; /* Increased font size by 10px */
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: background 0.3s ease;
+}
+
+.floating-button:hover {
+    background-color: #fff;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
     .hero h1 {
-        font-size: 50px;
+        font-size: 60px; /* Smaller font size for mobile */
     }
 
     .hero p {
-        font-size: 20px;
-    }
-
-    .hero .cta-button {
-        padding: 8px 20px;
-        font-size: 16px;
-    }
-
-    .services-container {
-        flex-direction: column;
+        font-size: 30px; /* Smaller font size for mobile */
     }
 
     .service-box {
-        width: 100%;
+        width: 100%; /* Full width for mobile */
+        margin: 10px 0; /* Margin adjustments */
     }
 
-    .logos img {
-        width: 80px;
+    .chat-container {
+        width: 90%; /* Full width for mobile */
+        height: auto; /* Adjust height for mobile */
+    }
+
+    .chatbox .user,
+    .chatbox .bot {
+        max-width: 95%; /* Allow for more space on mobile */
     }
 }
