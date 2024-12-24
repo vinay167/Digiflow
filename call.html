@@ -8,27 +8,27 @@
 </head>
 <body>
     <!-- Form Section -->
-    <section class="form-section">
-        <div class="form-container">
+    <section>
+        <div>
             <h1>Book a Call</h1>
             <form id="call-form">
-                <div class="form-group">
+                <div>
                     <label for="name">Name</label>
                     <input type="text" id="name" name="name" placeholder="Enter your name" required>
                 </div>
-                <div class="form-group">
+                <div>
                     <label for="email">Email</label>
                     <input type="email" id="email" name="email" placeholder="Enter your email" required>
                 </div>
-                <div class="form-group">
+                <!-- <div>
                     <label for="number">Phone Number</label>
                     <input type="tel" id="number" name="number" placeholder="Enter your phone number" pattern="[0-9]{10}" required>
-                </div>
-                <div class="form-group">
+                </div> -->
+                <div>
                     <label for="time">Preferred Time</label>
                     <input type="time" id="time" name="time" required>
                 </div>
-                <div class="form-group">
+                <div>
                     <label for="service">Service</label>
                     <select id="service" name="service" required>
                         <option value="">Select a Service</option>
@@ -39,55 +39,11 @@
                         <option value="cloud-solutions">Cloud Solutions</option>
                     </select>
                 </div>
-                <button type="submit" class="submit-button">Submit</button>
+                <button type="submit">Submit</button>
             </form>
         </div>
     </section>
 
-    <script>
-        document.getElementById('call-form').addEventListener('submit', async function(event) {
-            event.preventDefault(); // Prevent default form submission
-
-            // Collect form data
-            const formData = {
-                u_name: document.getElementById('name').value,
-                u_email: document.getElementById('email').value,
-                u_number1: document.getElementById('number').value,
-                u_time: document.getElementById('time').value,
-                u_service: document.getElementById('service').value
-            };
-
-            // API URL
-            const apiUrl = 'https://dev256986.service-now.com/api/now/table/u_digiflow';
-
-            try {
-                // Send the API request using Basic Authentication
-                const response = await fetch(apiUrl, {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json',
-                        'Accept': 'application/json',
-                        'Authorization': 'Basic ' + btoa('admin:Eg!FFb7uR0q%') // Replace with your credentials
-                    },
-                    body: JSON.stringify(formData)
-                });
-
-                if (response.ok) {
-                    // On success, display success message and redirect
-                    alert('Data submitted successfully!');
-                    window.location.href = 'index.html'; // Redirect to the main page
-                } else {
-                    // Handle API errors
-                    const errorData = await response.json();
-                    console.error('Error:', errorData);
-                    alert(`Error: ${errorData.error.message}`);
-                }
-            } catch (error) {
-                // Handle network or other errors
-                console.error('Error:', error);
-                alert('An error occurred while submitting the data.');
-            }
-        });
-    </script>
+    <script src="book_call_script.js"></script>
 </body>
 </html>
