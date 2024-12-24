@@ -1,3 +1,13 @@
+const express = require("express")
+const app = express()
+const cors = require("cors");
+app.use(
+    cors({
+        origin: "https://vinay167.github.io",
+    })
+)
+
+
 document.getElementById('call-form').addEventListener('submit', async function(event) {
     event.preventDefault(); // Prevent default form submission
 
