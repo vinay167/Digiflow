@@ -1,13 +1,3 @@
-const express = require("express")
-const app = express()
-const cors = require("cors");
-app.use(
-    cors({
-        origin: "https://vinay167.github.io",
-    })
-)
-
-
 document.getElementById('call-form').addEventListener('submit', async function(event) {
     event.preventDefault(); // Prevent default form submission
 
@@ -15,7 +5,7 @@ document.getElementById('call-form').addEventListener('submit', async function(e
     const formData = {
         u_name: document.getElementById('name').value,
         u_email: document.getElementById('email').value,
-        //u_number1: document.getElementById('number').value,
+        u_number1: document.getElementById('number').value,
         u_time: document.getElementById('time').value,
         u_service: document.getElementById('service').value
     };
